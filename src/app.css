@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	::-webkit-scrollbar {
+		/* display: none; */
+		width: 4px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #c3c3c3;
+	}
+
+	@font-face {
+		font-family: 'Text';
+		src: url('/fonts/sf-pro-text_regular.woff2') format('woff2');
+		font-weight: normal;
+	}
+	@font-face {
+		font-family: 'Text';
+		src: url('/fonts/sf-pro-text_semibold.woff2') format('woff2');
+		font-weight: 600;
+	}
+	@font-face {
+		font-family: 'Text';
+		src: url('/fonts/sf-pro-text_bold.woff2') format('woff2');
+		font-weight: 700;
+	}
+	@font-face {
+		font-family: 'SF Pro Icons';
+		src: url('/fonts/sf-pro-icons_regular.woff2') format('woff2');
+		font-weight: normal;
+	}
+	@font-face {
+		font-family: 'SF Pro Icons Bold';
+		src: url('/fonts/sf-pro-icons_bold.woff2') format('woff2');
+		font-weight: 700;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			/*  system colors  */
+			--system-red: 255, 69, 58;
+			--system-orange: 255, 159, 10;
+			--system-yellow: 255, 214, 10;
+			--system-green: 50, 215, 75;
+			--system-mint: 102, 212, 207;
+			--system-teal: 106, 196, 220;
+			--system-cyan: 90, 200, 245;
+			--system-blue: 10, 132, 255;
+			--system-indigo: 94, 92, 230;
+			--system-purple: 191, 90, 242;
+			--system-pink: 255, 55, 95;
+			--system-brown: 172, 142, 104;
+			--system-gray: 152, 152, 157;
+
+			/*  box shadow	 */
+			--primary-shadow: 0 36px 100px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgb(0, 0, 0);
+			--primary-secondary: 0 8px 40px 0 rgba(0, 0, 0, 0.7), 0 0 1px 1px rgb(0, 0, 0);
+			--primary-tertiary: 0 36px 100px 0 rgba(0, 0, 0, 0.45), 0 0 1px 1px rgb(0, 0, 0);
+			--primary-quaternary: 0 4px 20px 0 rgba(0, 0, 0, 0.45), 0 0 1px 1px rgb(0, 0, 0);
+			--primary-window-inner-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.2);
+
+			/* text  */
+			--text-primary: 255, 255, 255;
+			--text-primary-alpha: 0.85;
+			--text-secondary-alpha: 0.55;
+			--text-tertiary-alpha: 0.25;
+
+			/*  ui */
+			--header-view-top: 40, 82, 173;
+			--header-view-top-alpha: 0.08;
+			--header-view-base: 30, 30, 30;
+			--header-view-base-alpha: 0.8;
+
+			--menu: 40, 40, 40;
+			--menu-alpha: 0.58;
+
+			--popover-alpha: 0.28;
+
+			--fullscreen: 40, 40, 40;
+			--fullscreen-alpha: 0.5;
+
+			--hud: 40, 40, 40;
+			--hud-alpha: 0.5;
+
+			--selection-focused: 10, 130, 255;
+			--selection-focused-top-alpha: 0.75;
+
+			--selection-unfocused-top: 255, 255, 255;
+			--selection-unfocused-top-alpha: 0.1;
+
+			--selection-unfocused-base: 40, 40, 40;
+			--selection-unfocused-base-alpha: 0.65;
+
+			--side-bar-alpha: 0.45;
+
+			--title-bar: 0, 60, 60;
+			--title-bar-alpha: 0.8;
+
+			--tooltip-alpha: 0.35;
+
+			--under-window-background-alpha: 0.45;
+
+			--base-color: 0, 0, 0;
+			--ultra-thick-alpha: 0.5;
+			--thick-alpha: 0.4;
+			--medium-alpha: 0.29;
+			--thin-alpha: 0.2;
+			--ultra-thin-alpha: 0.1;
+		}
+	}
+	@media (prefers-color-scheme: light) {
+		:root {
+			/*  system colors  */
+			--system-red: 255, 69, 58;
+			--system-orange: 255, 149, 0;
+			--system-yellow: 255, 204, 0;
+			--system-green: 40, 205, 65;
+			--system-mint: 0, 199, 190;
+			--system-teal: 89, 173, 196;
+			--system-cyan: 85, 190, 240;
+			--system-blue: 0, 122, 255;
+			--system-indigo: 88, 86, 214;
+			--system-purple: 175, 82, 222;
+			--system-pink: 255, 45, 85;
+			--system-brown: 162, 132, 94;
+			--system-gray: 142, 142, 147;
+
+			/*  box shadow	 */
+			--primary-shadow: 0 36px 100px 0 rgba(0, 0, 0, 0.4), 0 0 3px rgba(0, 0, 0, 0.55);
+			--primary-secondary: 0 8px 40px 0 rgba(0, 0, 0, 0.25), 0 0 3px rgba(0, 0, 0, 0.55);
+			--primary-tertiary: 0 36px 100px 0 rgba(0, 0, 0, 0.25), 0 0 3px rgba(0, 0, 0, 0.55);
+			--primary-quaternary: 0 4px 20px 0 rgba(0, 0, 0, 0.25), 0 0 3px rgba(0, 0, 0, 0.55);
+			--primary-window-inner-shadow: inset 0 0 3px rgba(255, 255, 255, 0.1);
+
+			/* text  */
+			--text-primary: 0, 0, 0;
+			--text-primary-alpha: 0.85;
+			--text-secondary-alpha: 0.5;
+			--text-tertiary-alpha: 0.25;
+
+			/*  ui  */
+			--header-view-top: 255, 255, 255;
+			--header-view-top-alpha: 0.88;
+
+			--menu: 246, 246, 246;
+			--menu-alpha: 0.72;
+
+			--popover-alpha: 0.6;
+
+			--selection-focused: 10, 130, 255;
+			--selection-focused-top-alpha: 0.75;
+
+			--selection-unfocused-top: 0, 0, 0;
+			--selection-unfocused-top-alpha: 0.1;
+
+			--selection-unfocused-base: 246, 246, 246;
+			--selection-unfocused-base-alpha: 0.84;
+
+			--side-bar-alpha: 0.84;
+
+			--title-bar: 250, 250, 250;
+			--title-bar-alpha: 0.8;
+
+			--tooltip-alpha: 0.6;
+
+			--under-window-background-alpha: 0.84;
+
+			--base-color: 246, 246, 246;
+			--ultra-thick-alpha: 0.84;
+			--thick-alpha: 0.72;
+			--medium-alpha: 0.6;
+			--thin-alpha: 0.48;
+			--ultra-thin-alpha: 0.36;
+		}
+	}
+}
