@@ -1,4 +1,4 @@
-# mac OS Sonoma Clone
+# mac OS Sonoma
 
 
 
