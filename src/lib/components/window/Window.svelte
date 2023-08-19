@@ -9,7 +9,6 @@
 	import type { ResizeSource } from './type';
 	import windowsContext from '$lib/store/window';
 	import type { Apps } from '$lib/store/window/types';
-	import WindowControls from './WindowControls.svelte';
 
 	// make changes here to keep the windows on screen
 	afterUpdate(() => {
@@ -154,7 +153,7 @@
 	position: absolute;
 	top: 20%;
 	left: 20%;"
-	class="sm:min-h-[{minHeight}px] sm:min-w-[{minWidth}px] shadow-primary"
+	class="sm:min-h-[{minHeight}px] sm:min-w-[{minWidth}px] rounded-primary overflow-hidden"
 	role="none"
 	id={name}
 	bind:this={element}
@@ -162,7 +161,6 @@
 	on:mousedown={mouseDown}
 	on:dblclick={handleFullWindow}
 >
-	<WindowControls {name} />
 	<!-- window -->
 	<slot />
 	<!-- resize div's -->

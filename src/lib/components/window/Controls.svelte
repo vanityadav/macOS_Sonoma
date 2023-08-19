@@ -30,27 +30,31 @@
 				...state,
 				windows: {
 					...state.windows,
-					[name]: { screen: fullscreen ? prevScreenSize : 'fullscreen' }
+					[name]: {
+						screen:
+							$windowsContext.windows[name].screen === 'fullscreen'
+								? 'fullScreenWindow'
+								: 'fullscreen'
+					}
 				}
 			};
 		});
 	};
 </script>
 
-<div class="flex bg-headerView">
-	<div class="flex gap-2 p-4">
+<div class="flex bg-headerView items-center gap-4">
+	<div class="flex gap-2 p-4 items-center">
 		<button
 			on:click={() => handleAction('closed')}
-			class="w-3 h-3 bg-[#FF5F57] rounded-full border border-black/20"
+			class="w-3 h-3 bg-[#FF5F57] rounded-full border border-black/20 cursor-pointer"
 		/>
 		<button
 			on:click={() => handleAction('minimized')}
-			class="w-3 h-3 bg-[#FEBC2E] rounded-full border border-black/20"
+			class="w-3 h-3 bg-[#FEBC2E] rounded-full border border-black/20 cursor-pointer"
 		/>
 		<button
 			on:click={handleFullscreen}
-			class="w-3 h-3 bg-[#28C840] rounded-full border border-black/20"
+			class="w-3 h-3 bg-[#28C840] rounded-full border border-black/20 cursor-pointer"
 		/>
 	</div>
-	<div>{name}</div>
 </div>

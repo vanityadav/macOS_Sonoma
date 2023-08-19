@@ -19,15 +19,17 @@
 		if (element) {
 			let elementSize = element.getBoundingClientRect();
 
+			// name of current app
+			let name = element.id as Apps;
+
 			// change it when changing menu bar size and gap
-			let topOffset = 26;
+			let topOffset = $windowsContext.windows[name].screen === 'fullscreen' ? 0 : 26;
 
 			// disable windowedFullscreen/fullscreen on move/resize
 			if (
 				(element.dataset.screen === 'fullscreenWindowed' && element.dataset.draggable === 'true') ||
 				element.dataset.resizable === 'true'
 			) {
-				let name = element.id as Apps;
 				windowsContext.update((state) => ({
 					...state,
 					activeWindow: name,

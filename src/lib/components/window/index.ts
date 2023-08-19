@@ -1,5 +1,5 @@
-import Window from './NewWindow.svelte';
-import Desktop from './WindowsArea.svelte';
-import Controls from './WindowControls.svelte';
+import App from './App.svelte';
+import Desktop from './Desktop.svelte';
+import Controls from './Controls.svelte';
 
-export { Window, Controls, Desktop };
+export { App, Controls, Desktop };

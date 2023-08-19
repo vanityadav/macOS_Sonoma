@@ -15,7 +15,11 @@
 					...state.windows,
 					[name]: {
 						screen:
-							state.windows[name].screen === 'closed' ? 'windowed' : state.windows[name].screen
+							state.windows[name].screen === 'closed'
+								? 'windowed'
+								: state.windows[name].screen === 'minimized'
+								? 'windowed'
+								: state.windows[name].screen
 					}
 				}
 			}));
@@ -28,8 +32,9 @@
 	tabindex="0"
 	on:click={props.tag === 'div' ? openWindow : null}
 	href={props.tag === 'a' ? props.href : ''}
+	rel="external"
 	role="button"
-	class="flex flex-col items-center gap-1 group relative"
+	class="flex flex-col items-center gap-1 group relative cursor-pointer"
 >
 	<img
 		src={props.src}

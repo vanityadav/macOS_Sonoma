@@ -13,10 +13,10 @@ const dockRoutes: DockRoutes[] = [
 	{ tag: 'div', src: messenger, label: 'CONTACT' }
 ];
 const dockLinks: DockLinks[] = [
-	{ tag: 'a', href: '/Vanit Yadav CV.pdf', src: resume, label: 'RESUME' },
+	{ tag: 'a', href: 'https://www.vanit.dev', src: resume, label: 'Vanit Yadav' },
 	{
 		tag: 'a',
-		href: "mailto:vanityadav08@gmail.com?subject=Let's chat about my website&body=Hi Vanit,%0A %0AI would like you to ....",
+		href: "mailto:vanityadav08@gmail.com?subject=Let's chat about...&body=Hi Vanit,%0A %0AI would like you to ....",
 		src: mail,
 		label: 'MAIL'
 	}

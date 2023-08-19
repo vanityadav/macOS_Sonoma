@@ -6,6 +6,7 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			cursor: { pointer: 'url(../../src/lib/assets/pointers/hand.svg), auto' },
 			fontFamily: {
 				primary: ["'Text'", ...defaultTheme.fontFamily.sans]
 			},
@@ -72,6 +73,10 @@ export default {
 				textSecondary: 'rgba(var(--text-primary) , var(--text-secondary-alpha))',
 				textTertiary: 'rgba(var(--text-primary) , var(--text-tertiary-alpha))',
 
+				// icons
+				menuFill: 'rgba(var(--menu-fill) , var(--menu-fill-alpha))',
+				appleLogoFill: 'rgba(var(--menu-fill))',
+
 				// ui
 				headerViewTop: 'rgba(var(--header-view-top) , var(--header-view-top-alpha))',
 				headerViewBase: 'rgba(var(--header-view-base) , var(--header-view-base-alpha))',
@@ -114,6 +119,9 @@ export default {
 				tertiary: 'var(--tertiary-shadow)',
 				quaternary: 'var(--quaternary-shadow)',
 				window: 'var(--primary-window-inner-shadow)'
+			},
+			borderRadius: {
+				primary: '10px'
 			},
 			animation: {
 				dockIconAni: 'dockIconAni 0.4s cubic-bezier(.09,.42,.77,.71) forwards'
