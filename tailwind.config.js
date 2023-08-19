@@ -6,7 +6,7 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
-			cursor: { pointer: 'url(../../src/lib/assets/pointers/hand.svg), auto' },
+			cursor: { pointer: 'url(/pointers/hand.svg), auto' },
 			fontFamily: {
 				primary: ["'Text'", ...defaultTheme.fontFamily.sans]
 			},

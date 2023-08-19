@@ -5,7 +5,7 @@
 @layer base {
 	html {
 		scroll-behavior: smooth;
-		cursor: url('../src/lib/assets/pointers/pointer.svg'), auto;
+		cursor: url('/pointers/pointer.svg'), auto;
 	}
 	::-webkit-scrollbar {
 		/* display: none; */
